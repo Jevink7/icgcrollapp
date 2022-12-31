@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Random Number Generator</h1>
+  <form>
+    <label for="name">Enter your name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <button type="button" id="generate-button" onclick="generateNumber()">Generate Number</button>
+  </form> 
+  <div id="results">
+    <h2>Results</h2>
+    <table id="results-table">
+      <tr>
+        <th>Name</th>
+        <th>Number</th>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Load the Firebase library -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-database.js"></script>
+  <!-- Initialize Firebase -->
+  <script>
+    var firebaseConfig = {
+  apiKey: "AIzaSyCI5LMKcsyi1EHn45N6jPfBx9U7WF-6yoo",
+  authDomain: "rollforit-debc3.firebaseapp.com",
+  databaseURL: "https://rollforit-debc3-default-rtdb.firebaseio.com",
+  projectId: "rollforit-debc3",
+  storageBucket: "rollforit-debc3.appspot.com",
+  messagingSenderId: "910795983868",
+  appId: "1:910795983868:web:bfb7570a27f6f3dbe34079",
+  measurementId: "G-SRL3RMBK6H"
+};
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
